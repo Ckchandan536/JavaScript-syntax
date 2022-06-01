@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Literals</title>
+</head>
+
+<body>
+    <script>
+        //Multiline
+        // Without template literal
+        console.log('List of Fruits \nApple \nOrange \nMango');
+
+        // With template literal
+        console.log(`List of Fruits
+            Apple
+            Orange
+            Mango`);
+
+        //Expression
+        var p = 1000;
+        var n = 1;
+        var r = 7;
+        var SI = `Simple Interest is  ${(p * n * r) / 100}`;
+        
+        // [`] {backtick}
+
+        console.log("Simple Interest is" + SI);
+
+        //TaggedLiteral
+        function TaggedLiteralEg(strings) {
+            document.write(strings);
+        }
+        TaggedLiteralEg `Hello Javascript`;
+
+        //String.raw
+        var s = String.raw`Value of expression is ${2 + 3}`;
+        document.write("<br>"+s);
+        //nested template 
+        function maximum(x, y, z) {
+            var c = `value ${(y > x && y > z) ? 'y is greater' :
+                `${x > z ? 'x is greater' : 'z is greater'}`}`;
+            return (c);
+        }
+        document.write("<br>" + maximum(2, 5, 10));
+        document.write("<br>" + maximum(12, 10, 8));
+        document.write("<br>" + maximum(11, 21, 1));
+    </script>
+</body>
+
+</html>
